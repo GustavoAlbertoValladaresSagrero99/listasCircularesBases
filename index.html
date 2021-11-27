@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta de autobuses por bases</title>
+</head>
+<body>
+
+    <header>
+        <h2>Ruta de autobuses por bases</h2>
+        <div class="infoAlumno">
+            <p>Alumno: Gustavo Alberto Valladares Sagrero - 3H</p>
+        </div>
+    </header>
+
+
+    <div class="APP">
+        <form id="adminBases">
+            <h3>Administración de bases</h3>
+            <div class="agregarBase">
+                <div class="inputBases">
+                    <label for="txtNombreBase">Nombre base: </label>
+                    <input type="text" name="" id="txtNombreBase" placeholder="Ingrese el nombre de la base">
+                </div>
+                <div class="inputBases">
+                    <label for="txtMinutosBase">Minutos base: </label>
+                    <input type="number" name="" id="txtMinutosBase" placeholder="Ingrese los minutos de la base" min="0" max="">
+                </div>
+                <div class="inputBasesAgregar">
+                    <button type="button" id="agregarBase">Agregar base</button>
+                </div>
+            </div>
+            <div class="eliminarBase">
+                <div class="inputBases">
+                    <label for="txtNombreBaseEliminar">Nombre base: </label>
+                    <input type="text" name="" id="txtNombreBaseEliminar" placeholder="Nombre de la base">
+                </div>
+                <div class="inputBasesEliminar">
+                    <button type="button" id="eliminarBase">Eliminar base</button>
+                </div>
+            </div>
+        </form>
+
+        <form id="adminTickets">
+            <h3>Creación de ticket de autobus</h3>
+            <div class="inputTickets">
+                <label for="ticketBase">Nombre base de inicio: </label>
+                <input type="text" name="" id="ticketBase" placeholder="Base de inicio">
+            </div>
+            <div class="inputTickets">
+                <label for="ticketInicio">Hora de inicio: </label>
+                <input type="number" name="" id="ticketInicio" placeholder="Hora inicio" >
+            </div>
+            <div class="inputTickets">
+                <label for="ticketRecorrido">Tiempo de recorrido: </label>
+                <input type="number" name="" id="ticketRecorrido" placeholder="Tiempo">
+            </div>
+            <div class="inputTickets">
+                <Button type="button" id="agregarTicket">Agregar ticket</Button>
+            </div>
+        </form>
+
+
+        <div class="infoMensaje">
+            <p id="msj"><span id="msjAsunto"></span> <span id="msjContexto"></span></p>
+        </div>
+
+        <button type="button" id="listar">Listar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Base</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+            <tbody id="table"></tbody>
+        </table>
+    </div>
+    
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
